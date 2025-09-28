@@ -1,196 +1,470 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>NWANNA CLIFFORD'S PORTFOLIO</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chukwuma Clifford Nwanna - Data & AI Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .tech-badge { background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%); }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-gray-800">Clifford Nwanna</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>CHUKWUMA CLIFFORD NWANNA'S<br />
-						PORTFOLIO</h1>
-						<p>I am a Data Scientist and Electronics Engineer specializing in robotics, machine learning, AI-powered solutions, data analytics, and visualization tools like Power BI and Tableau. 
-						 This portfolio showcases a range of projects that highlight my expertise in solving real-world problems using data-driven approaches. <br />
-						 <ul class="icons">
-							<li><a href="http://www.linkedin.com/in/cliffordnwanna" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/cliffordnwanna" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="nwannachumaclifford@gmail.com" class="icon brands alt fa-email"><span class="label">Email</span></a></li>
-						</ul>
-						 <ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white/95 backdrop-blur-sm z-40 hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#about" class="text-2xl text-gray-800 mobile-menu-item">About</a>
+            <a href="#projects" class="text-2xl text-gray-800 mobile-menu-item">Projects</a>
+            <a href="#experience" class="text-2xl text-gray-800 mobile-menu-item">Experience</a>
+            <a href="#contact" class="text-2xl text-gray-800 mobile-menu-item">Contact</a>
+        </div>
+    </div>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">PROJECTS</a>
-					</header>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-float">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="block">Chukwuma Clifford</span>
+                    <span class="block text-cyan-300">Nwanna</span>
+                </h1>
+            </div>
+            <h2 class="text-xl md:text-2xl mb-8 opacity-90">
+                Senior Data & AI Engineer | Production ML Systems | Remote Expert
+            </h2>
+            <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto opacity-80">
+                Building production-ready AI/ML systems that solve real business problems. 
+                <span class="text-cyan-300 font-semibold">50K+ users served</span> across banking, healthcare & SaaS.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#projects" class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                    <i class="fas fa-rocket mr-2"></i>View Live Projects
+                </a>
+                <a href="https://github.com/cliffordnwanna" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition">
+                    <i class="fab fa-github mr-2"></i>GitHub Portfolio
+                </a>
+            </div>
+            <div class="flex justify-center items-center space-x-8 mt-12">
+                <a href="mailto:nwannachumaclifford@gmail.com" class="text-white hover:text-cyan-300 transition">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/cliffordnwanna" target="_blank" class="text-white hover:text-cyan-300 transition">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/cliffordnwanna" target="_blank" class="text-white hover:text-cyan-300 transition">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							
-			
-						</ul>
-						<ul class="icons">
-							<li><a href="http://www.linkedin.com/in/cliffordnwanna" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="https://github.com/cliffordnwanna" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Senior Data & AI Engineer</h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            I'm a passionate Data & AI Engineer with 3+ years of experience building production-grade ML/AI systems. 
+                            I specialize in turning complex data into actionable business insights through intelligent automation and predictive modeling.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            My expertise spans the entire ML pipeline - from data engineering and model development to deployment and monitoring. 
+                            I've successfully deployed systems serving 50K+ users and built multiple SaaS applications with enterprise adoption.
+                        </p>
+                        <div class="flex flex-col space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-blue-500 w-6"></i>
+                                <span class="ml-3">Lagos, Nigeria (Remote Ready)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-globe text-blue-500 w-6"></i>
+                                <span class="ml-3">Open to relocation with sponsorship</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-blue-500 w-6"></i>
+                                <span class="ml-3">Available across global time zones</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-6">Core Skills</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Python</div>
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">SQL/T-SQL</div>
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Azure AI</div>
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">LangChain</div>
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Streamlit</div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Machine Learning</div>
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">NLP</div>
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Docker</div>
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">CI/CD</div>
+                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Power BI</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Main -->
-					<div id="main"> 
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+                <p class="text-lg text-gray-600 mt-6">Production-ready AI/ML systems with real business impact</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- CV360 Project -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-robot text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-gray-800">CV360 - AI CV Builder</h3>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">LIVE</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            LLM-powered SaaS chatbot that generates recruiter-ready CVs. Built with Azure OpenAI and LangChain.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Streamlit</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Azure OpenAI</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">LangChain</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm text-gray-500">500+ users | 85% satisfaction</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://cv360.ecotronicsenterprise.com" target="_blank" class="flex-1 bg-blue-500 text-white text-center py-3 rounded-lg hover:bg-blue-600 transition">
+                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                            </a>
+                            <a href="https://github.com/cliffordnwanna" target="_blank" class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-50 transition">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									
-									<h2><a href="https://bodybalanceai.streamlit.app">BODYBALANCE.AI <br />
-									</a></h2>
-									<p>
-										BODYBALANCE.AI is an advanced AI-driven chatbot developed to revolutionize customer interactions for the BodyBalance brand. Designed to provide seamless support, it effectively answers frequently asked questions, recommends tailored pain relief products, and assists customers in placing orders. This innovative solution not only enhances customer engagement through real-time responses but also optimizes the customer support process, ensuring higher satisfaction and increased sales opportunities.<br />
-										
-										Hosted on Streamlit, BODYBALANCE.AI is accessible, user-friendly, and easily integrated into business operations. The chatbot leverages natural language processing (NLP) and machine learning algorithms to deliver accurate, context-aware recommendations, demonstrating technical proficiency in AI technologies. This positions BODYBALANCE.AI as a valuable asset for modern e-commerce and healthcare-focused businesses. Its ideation and implementation highlights my expertise in AI deployment, customer relationship management, and scalable business solutions.<br />
-									</p> <a href="https://bodybalanceai.streamlit.app">BODYBALANCE.AI<br />
-								</header>
-								<a href="https://bodybalanceai.streamlit.app" class="image main"><img src="images/bodybalance.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/cliffordnwanna/BODYBALANCE.AI" class="button large">View Project</a></li>
-								</ul>
-							</article>
+                <!-- Smart Attendance System -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-chart-bar text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-gray-800">Smart Attendance SaaS</h3>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">LIVE</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            HR SaaS for SMEs that parses biometric logs and auto-generates reports with licensing and authentication.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Streamlit</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Supabase</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm text-gray-500">15+ SME clients | 99.5% uptime</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#contact" class="flex-1 bg-green-500 text-white text-center py-3 rounded-lg hover:bg-green-600 transition">
+                                <i class="fas fa-eye mr-2"></i>Request Demo
+                            </a>
+                            <a href="https://github.com/cliffordnwanna" target="_blank" class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-50 transition">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
+                <!-- BodyBalanceAI -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-gray-800">BodyBalanceAI Chatbot</h3>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">LIVE</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Healthcare chatbot for physiotherapy brand that automates client engagement and booking processes.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Azure AI</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Streamlit</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Healthcare AI</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm text-gray-500">40% engagement increase | 25% booking efficiency</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#contact" class="flex-1 bg-purple-500 text-white text-center py-3 rounded-lg hover:bg-purple-600 transition">
+                                <i class="fas fa-eye mr-2"></i>Request Demo
+                            </a>
+                            <a href="https://github.com/cliffordnwanna" target="_blank" class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-50 transition">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-										<h2><a href="https://github.com/cliffordnwanna/HYBRID_POWERED_SURVEILLANCE_SYSTEM">HYBRID-POWERED SURVEILLANCE SYSTEM<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/cliffordnwanna/HYBRID_POWERED_SURVEILLANCE_SYSTEM" class="image fit"><img src="images/prototype.jpg" alt="" /></a>
-									<p>This project involved the design and implementation of a hybrid-powered surveillance system equipped with cellphone detection and autonomous navigation. The system was tailored to curb examination malpractice, leveraging IoT technology, RF detection, and sustainable energy solutions. Key contributions included team leadership, technical design, and prototype development. The solution integrated hardware components such as Arduino Uno, HC-SR04 ultrasonic sensors, and RF detection unit, powered by solar energy for sustainability. Programming was done using C++ in Arduino IDE, enabling seamless communication between components and precise navigation. The system’s real-world impact includes reducing reliance on human invigilation, ensuring unbiased monitoring, and making it suitable for deployment in off-grid locations.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/cliffordnwanna/HYBRID_POWERED_SURVEILLANCE_SYSTEM" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
+                <!-- Enterprise Churn Model -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-6xl"></i>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold text-gray-800">Enterprise Churn Model</h3>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">PRODUCTION</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            ML model deployed at Wema Bank for customer churn prediction, powering enterprise-wide retention campaigns.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-orange-100 text-orange-800 px-3 py-2 rounded-full text-sm">Python</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-2 rounded-full text-sm">SQL/T-SQL</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-2 rounded-full text-sm">Azure AI</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-2 rounded-full text-sm">MLOps</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm text-gray-500">50K+ customers served | 87% accuracy</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#contact" class="flex-1 bg-orange-500 text-white text-center py-3 rounded-lg hover:bg-orange-600 transition">
+                                <i class="fas fa-lock mr-2"></i>Confidential
+                            </a>
+                            <a href="#contact" class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-50 transition">
+                                <i class="fas fa-info-circle mr-2"></i>Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-										<h2><a href="https://github.com/cliffordnwanna/CREDIT_CARD_CUSTOMER_SEGMENTATION">CREDIT CARD CUSTOMER SEGMENTATION<br />
-											</a></h2>
-									</header>
-									<a href="https://github.com/cliffordnwanna/CREDIT_CARD_CUSTOMER_SEGMENTATION" class="image fit"><img src="images/Hierarchical Clustering.png" alt="" /></a>
-									<p>The Credit Card Customer Segmentation project analyzes the spending behaviors of approximately 9,000 active credit card users over six months using unsupervised learning techniques like K-Means and Principal Component Analysis(PCA). My core objective was to identifY distinct customer segments to inform targeted marketing strategies and personalized services.
-										Key highlights include data preprocessing (handling missing values, outliers, and feature engineering), dimensionality reduction using PCA, and optimal clustering via methods like the Elbow Method and Silhouette Score. My analysis drives actionable recommendations to improve customer engagement, optimize resources, and manage credit risk effectively.
-										
-										The project demonstrates my expertise in Python, machine learning libraries (Scikit-learn), data visualization (Seaborn, Matplotlib), and strategic problem-solving to enhance financial decision-making. By identifying unique customer behaviors, businesses can optimize resource allocation, develop tailored products, and make data-driven decisions to enhance profitability and strengthen customer relationships.<br />
-										</p><br />
-									<ul class="actions special">
-										<li><a href="https://github.com/cliffordnwanna/CREDIT_CARD_CUSTOMER_SEGMENTATION" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<h2><a href="https://github.com/cliffordnwanna/MICROSOFT_MALWARE_PREDICTION">MICROSOFT MALWARE PREDICTION<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/cliffordnwanna/MICROSOFT_MALWARE_PREDICTION" class="image fit"><img src="images/microsoft.jpg" alt="" /></a>
-									<p>With this project, I explored how machine learning can enhance malware detection and prediction. The insights I gained from both supervised and unsupervised techniques, including classification and clustering algorithms, can be used to develop more robust and accurate cybersecurity solutions. The project utilized tools such as Python, Scikit-learn, and TensorFlow for model development and evaluation, along with data preprocessing libraries like Pandas and NumPy. Visualization libraries like Matplotlib were used to analyze feature importance and model performance, emphasizing the practical application of machine learning in strengthening cybersecurity defenses.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/cliffordnwanna/MICROSOFT_MALWARE_PREDICTION" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/cliffordnwanna/NASA_API_EDA">NASA API EXPLORATORY DATA ANALYSIS<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/cliffordnwanna/NASA_API_EDA" class="image fit"><img src="images/NASA.jpg" alt="" /></a>
-									<p>
-										This project demonstrates how to interact with NASA's public APIs to fetch and process data. I honed into my skills in making API requests, handling JSON responses, and managing data processing with Python. The implementation leverages libraries such as requests for API calls, json for parsing responses, and pandas for efficient data manipulation and analysis. Additionally, data visualization tools like matplotlib and seaborn are employed to present insights effectively, showcasing proficiency in API integration and data science workflows. The project also highlights my ability to work with real-world datasets, ensuring data quality and consistency for analysis. By bridging raw API data and actionable insights, my project demonstrates practical problem-solving skills in data engineering and visualization.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/cliffordnwanna/NASA_API_EDA" class="button">View Project</a></li>
-									</ul>
-								</article>
-							</section>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Experience</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <!-- Wema Bank -->
+                    <div class="bg-gray-50 rounded-xl p-8 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Data Scientist</h3>
+                                <p class="text-lg text-blue-600 font-semibold">Wema Bank Plc</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-gray-600">Mar 2025 – Present</p>
+                                <p class="text-sm text-gray-500">Lagos, Nigeria (Hybrid)</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Built enterprise-wide churn prediction model serving 50K+ customers with 87% accuracy
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Designed AI agents on Azure AI Foundry for real-time customer analytics across 5+ business units
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Delivered comprehensive EDA on 500K+ customer records, improving marketing effectiveness by 15%
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Automated reporting pipelines, reducing manual work by 30% and improving accuracy by 25%
+                            </li>
+                        </ul>
+                    </div>
 
-					
+                    <!-- JéGO Technologies -->
+                    <div class="bg-gray-50 rounded-xl p-8 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">AI/ML Engineer (Remote Contract)</h3>
+                                <p class="text-lg text-blue-600 font-semibold">JéGO Technologies</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-gray-600">Jan 2025 – Mar 2025</p>
+                                <p class="text-sm text-gray-500">Remote</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Developed ML workflows for EV optimization and energy consumption prediction
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Successfully contributed to distributed Agile teams with 95%+ sprint completion rate
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Implemented CI/CD best practices and participated in system design sessions
+                            </li>
+                        </ul>
+                    </div>
 
-					</div>
+                    <!-- Ecotronics -->
+                    <div class="bg-gray-50 rounded-xl p-8 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Founder & Solutions Engineer</h3>
+                                <p class="text-lg text-blue-600 font-semibold">Ecotronics Enterprise</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-gray-600">Jun 2022 – Present</p>
+                                <p class="text-sm text-gray-500">Remote</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Built and deployed 20+ AI/ML projects including CV360, Smart Attendance, and BodyBalanceAI
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Achieved 99.5% uptime across all live deployments with comprehensive monitoring
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                Generated 500+ user registrations and 15+ enterprise clients across SaaS products
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Ikeja, Lagos<br />
-								Nigeria</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">+2348107276194</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">nwannachumaclifford@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="http://www.linkedin.com/in/cliffordnwanna" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://github.com/cliffordnwanna" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+                <div class="text-center mt-12">
+                    <a href="https://cliffordnwanna.github.io/cv.pdf" target="_blank" class="inline-flex items-center bg-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition transform hover:scale-105">
+                        <i class="fas fa-download mr-3"></i>Download Full CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
+                <div class="w-24 h-1 bg-white/30 mx-auto"></div>
+                <p class="text-xl mt-6 opacity-90">Ready to build something amazing? Let's connect!</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="bg-white/20 rounded-full p-4 mr-6">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <a href="mailto:nwannachumaclifford@gmail.com" class="text-cyan-300 hover:text-white transition">nwannachumaclifford@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white/20 rounded-full p-4 mr-6">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">LinkedIn</p>
+                                <a href="https://linkedin.com/in/cliffordnwanna" target="_blank" class="text-cyan-300 hover:text-white transition">linkedin.com/in/cliffordnwanna</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white/20 rounded-full p-4 mr-6">
+                                <i class="fab fa-github text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">GitHub</p>
+                                <a href="https://github.com/cliffordnwanna" target="_blank" class="text-cyan-300 hover:text-white transition">github.com/cliffordnwanna</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white/20 rounded-full p-4 mr-6">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <p class="text-cyan-300">+234 810</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+                    <form action="#" class="space-y-4">
+                        <input class="w-full rounded-lg p-4" placeholder="Your name" />
+                        <input class="w-full rounded-lg p-4" placeholder="Your email" />
+                        <textarea class="w-full rounded-lg p-4" rows="5" placeholder="Message"></textarea>
+                        <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			</div>
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        document.querySelectorAll('.mobile-menu-item').forEach(el=> el.addEventListener('click', ()=> mobileMenu.classList.add('hidden')));
+    </script>
+</body>
 </html>
