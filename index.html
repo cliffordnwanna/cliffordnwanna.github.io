@@ -1,472 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chukwuma Clifford Nwanna - Data & AI Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-        .tech-badge { background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%); }
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chukwuma Clifford Nwanna — ML/AI Engineer building production-grade AI systems, live SaaS products, and practical solutions for finance, SaaS, and emerging markets." />
+  <title>Chukwuma Clifford Nwanna | ML/AI Engineer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .section-title {
+      letter-spacing: -0.03em;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .card-hover {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12);
+      border-color: rgba(59, 130, 246, 0.35);
+    }
+
+    .soft-shadow {
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+    }
+
+    .tech-tag {
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      background: rgba(248, 250, 252, 0.92);
+    }
+
+    .hero-gradient {
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 36%),
+        radial-gradient(circle at top right, rgba(14, 165, 233, 0.18), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .accent-line {
+      background: linear-gradient(90deg, #2563eb, #06b6d4);
+    }
+
+    .muted-border {
+      border-color: rgba(226, 232, 240, 0.9);
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-lg z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-xl font-bold text-gray-800">Clifford Nwanna</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition">Projects</a>
-                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
+<body class="bg-slate-50 text-slate-900">
+  <!-- Navigation -->
+  <nav class="fixed top-0 z-50 w-full border-b border-slate-200/70 glass">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#top" class="text-sm font-semibold tracking-wide text-slate-900">
+          Chukwuma Clifford Nwanna
+        </a>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white/95 backdrop-blur-sm z-40 hidden">
-        <div class="flex flex-col items-center justify-center h-full space-y-8">
-            <a href="#about" class="text-2xl text-gray-800 mobile-menu-item">About</a>
-            <a href="#projects" class="text-2xl text-gray-800 mobile-menu-item">Projects</a>
-            <a href="#experience" class="text-2xl text-gray-800 mobile-menu-item">Experience</a>
-            <a href="#contact" class="text-2xl text-gray-800 mobile-menu-item">Contact</a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="#about" class="text-sm text-slate-600 transition hover:text-slate-900">About</a>
+          <a href="#projects" class="text-sm text-slate-600 transition hover:text-slate-900">Projects</a>
+          <a href="#experience" class="text-sm text-slate-600 transition hover:text-slate-900">Experience</a>
+          <a href="#skills" class="text-sm text-slate-600 transition hover:text-slate-900">Skills</a>
+          <a href="#community" class="text-sm text-slate-600 transition hover:text-slate-900">Community</a>
+          <a href="#contact" class="text-sm text-slate-600 transition hover:text-slate-900">Contact</a>
         </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-slate-700" aria-label="Open navigation menu">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="gradient-bg text-white min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="container mx-auto px-6 text-center relative z-10">
-            <div class="animate-float">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                    <span class="block">Chukwuma Clifford</span>
-                    <span class="block">Nwanna</span>
-                </h1>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 hidden bg-white/95 backdrop-blur-sm md:hidden">
+    <div class="flex h-full flex-col items-center justify-center gap-8">
+      <a href="#about" class="mobile-menu-item text-2xl font-medium text-slate-900">About</a>
+      <a href="#projects" class="mobile-menu-item text-2xl font-medium text-slate-900">Projects</a>
+      <a href="#experience" class="mobile-menu-item text-2xl font-medium text-slate-900">Experience</a>
+      <a href="#skills" class="mobile-menu-item text-2xl font-medium text-slate-900">Skills</a>
+      <a href="#community" class="mobile-menu-item text-2xl font-medium text-slate-900">Community</a>
+      <a href="#contact" class="mobile-menu-item text-2xl font-medium text-slate-900">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header id="top" class="hero-gradient pt-28">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-12 pb-20 pt-6 lg:grid-cols-2 lg:pb-24">
+        <div>
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">
+            ML / AI Engineer
+          </p>
+          <h1 class="section-title max-w-3xl text-4xl font-semibold leading-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            Building production AI systems, live SaaS products, and practical solutions for emerging markets
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            I design and ship end-to-end machine learning and AI applications across finance, SaaS, healthcare, and automation.
+            My work focuses on useful systems, clean deployment, and measurable business value.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="#projects" class="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+              View featured projects
+            </a>
+            <a href="https://github.com/cliffordnwanna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-white">
+              GitHub
+            </a>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="mailto:nwannachumaclifford@gmail.com" class="text-sm text-slate-600 transition hover:text-slate-900">
+              nwannachumaclifford@gmail.com
+            </a>
+            <span class="text-slate-300">|</span>
+            <a href="https://linkedin.com/in/cliffordnwanna" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-600 transition hover:text-slate-900">
+              LinkedIn
+            </a>
+            <span class="text-slate-300">|</span>
+            <a href="https://cliffordnwanna.github.io" target="_blank" rel="noopener noreferrer" class="text-sm text-slate-600 transition hover:text-slate-900">
+              Portfolio
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:pl-10">
+          <div class="soft-shadow rounded-3xl border border-white/70 bg-white p-6 sm:p-8">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border muted-border bg-slate-50 p-5">
+                <div class="text-sm font-medium text-slate-500">Focus</div>
+                <div class="mt-2 text-lg font-semibold text-slate-900">Finance, SaaS, AI Systems</div>
+              </div>
+              <div class="rounded-2xl border muted-border bg-slate-50 p-5">
+                <div class="text-sm font-medium text-slate-500">Work style</div>
+                <div class="mt-2 text-lg font-semibold text-slate-900">Production-first and practical</div>
+              </div>
+              <div class="rounded-2xl border muted-border bg-slate-50 p-5">
+                <div class="text-sm font-medium text-slate-500">Products</div>
+                <div class="mt-2 text-lg font-semibold text-slate-900">Live user-facing platforms</div>
+              </div>
+              <div class="rounded-2xl border muted-border bg-slate-50 p-5">
+                <div class="text-sm font-medium text-slate-500">Community</div>
+                <div class="mt-2 text-lg font-semibold text-slate-900">Mentor and builder</div>
+              </div>
             </div>
-            <h2 class="text-xl md:text-2xl mb-8 opacity-90">
-                Senior Data Scientist & AI Engineer | Production ML Systems | Remote Expert
-            </h2>
-            <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto opacity-80">
-                I build production-ready AI/ML systems that solve real business problems. 
-                <span class="text-cyan-300 font-semibold">50K+ users served</span> across banking, healthcare & SaaS.
+
+            <div class="mt-6 rounded-2xl border muted-border bg-slate-50 p-5">
+              <div class="text-sm font-medium text-slate-500">Core strengths</div>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Python</span>
+                <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">SQL</span>
+                <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Azure OpenAI</span>
+                <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">RAG</span>
+                <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">FastAPI</span>
+                <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Streamlit</span>
+                <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Docker</span>
+                <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Azure</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proof strip -->
+      <div class="grid gap-4 pb-16 sm:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="text-sm font-medium text-slate-500">Live products</div>
+          <div class="mt-2 text-2xl font-semibold text-slate-950">UpJobs.co and more</div>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Shipping real AI products with active users and practical business use cases.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="text-sm font-medium text-slate-500">Domains</div>
+          <div class="mt-2 text-2xl font-semibold text-slate-950">Finance, SaaS, healthcare</div>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Experience across regulated and customer-facing environments.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="text-sm font-medium text-slate-500">Community</div>
+          <div class="mt-2 text-2xl font-semibold text-slate-950">Mentor at Chessncode</div>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Supporting aspiring data professionals with structured mentorship.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-20">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">About</p>
+        <h2 class="section-title mt-3 text-3xl font-semibold text-slate-950 sm:text-4xl">Built for practical AI delivery</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          I am an ML/AI Engineer with experience turning raw data into deployed systems that solve real business problems.
+          My work spans model development, LLM applications, data pipelines, and product-oriented deployment.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 lg:grid-cols-2">
+        <div class="rounded-3xl border border-slate-200 bg-white p-8 soft-shadow">
+          <h3 class="text-xl font-semibold text-slate-950">Professional summary</h3>
+          <p class="mt-4 leading-8 text-slate-600">
+            ML/AI Engineer with 3+ years of experience building production-grade machine learning and AI systems across finance and SaaS environments.
+            Specializes in scalable data pipelines, LLM-powered applications, and cost-efficient AI solutions for emerging markets.
+            Proven ability to translate complex data into actionable insights and deliver end-to-end intelligent systems under real-world constraints.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-8 soft-shadow">
+          <h3 class="text-xl font-semibold text-slate-950">Research interests</h3>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <span class="tech-tag rounded-full px-4 py-2 text-sm text-slate-700">Applied Machine Learning in Emerging Markets</span>
+            <span class="tech-tag rounded-full px-4 py-2 text-sm text-slate-700">Financial AI & Transaction Intelligence</span>
+            <span class="tech-tag rounded-full px-4 py-2 text-sm text-slate-700">NLP & LLM Applications for Structured Data</span>
+            <span class="tech-tag rounded-full px-4 py-2 text-sm text-slate-700">Low-cost AI Systems for SMEs</span>
+            <span class="tech-tag rounded-full px-4 py-2 text-sm text-slate-700">Edge AI & IoT-integrated Intelligent Systems</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="border-y border-slate-200 bg-slate-50 py-20">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">Selected work</p>
+        <h2 class="section-title mt-3 text-3xl font-semibold text-slate-950 sm:text-4xl">Live products and production systems</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          These are the projects that best represent the kind of engineer I am: product-minded, deployment-focused, and comfortable working across AI, data, and systems.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 lg:grid-cols-2">
+        <!-- UpJobs -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow card-hover">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Flagship product</p>
+              <h3 class="mt-2 text-2xl font-semibold text-slate-950">UpJobs.co</h3>
+            </div>
+            <span class="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
+              Live SaaS
+            </span>
+          </div>
+
+          <p class="mt-4 leading-7 text-slate-600">
+            A live AI-powered job discovery and matching platform with automated data pipelines, embedding-based recommendations, and real users.
+          </p>
+
+          <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Automated ingestion and cleanup of job listings</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Embedding-based matching and ranking for relevant recommendations</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Deployed on VPS with scheduled jobs and logging</li>
+          </ul>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Python</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">SQL</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Embeddings</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Vector Search</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Cron Jobs</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">VPS</span>
+          </div>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="https://upjobs.co" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+              Live site
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50">
+              Case study request
+            </a>
+          </div>
+        </article>
+
+        <!-- Conversational Agent Builder -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow card-hover">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">RAG platform</p>
+              <h3 class="mt-2 text-2xl font-semibold text-slate-950">Conversational Agent Builder</h3>
+            </div>
+            <span class="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700">
+              Production demo
+            </span>
+          </div>
+
+          <p class="mt-4 leading-7 text-slate-600">
+            A production-ready platform for building domain-specific AI chatbots using multi-source knowledge from files, text, and website content.
+          </p>
+
+          <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>RAG workflow with embeddings and cosine similarity search</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Knowledge ingestion from PDFs, text input, and scraping</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Built with TypeScript, Next.js, and OpenAI</li>
+          </ul>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Next.js</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">TypeScript</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">RAG</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">OpenAI</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Vector Search</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Vercel</span>
+          </div>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="https://conversational-agent-builder.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+              Live demo
+            </a>
+            <a href="https://github.com/cliffordnwanna/CONVERSATIONAL_AGENT_BUILDER" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50">
+              Source code
+            </a>
+          </div>
+        </article>
+
+        <!-- Smart Attendance -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow card-hover">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">SaaS product</p>
+              <h3 class="mt-2 text-2xl font-semibold text-slate-950">Smart Attendance SaaS</h3>
+            </div>
+            <span class="rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700">
+              Live system
+            </span>
+          </div>
+
+          <p class="mt-4 leading-7 text-slate-600">
+            An HR-focused attendance intelligence platform that processes biometric logs and generates reports, analytics, and exports for SMEs.
+          </p>
+
+          <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Authentication and licensing workflow for managed access</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Automated file parsing, reporting, and dashboard generation</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Built for low-cost deployment and practical SME use</li>
+          </ul>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Python</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Streamlit</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Supabase</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">PostgreSQL</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">PDF Export</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Analytics</span>
+          </div>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+              Request demo
+            </a>
+            <a href="https://github.com/cliffordnwanna" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50">
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Enterprise Banking AI -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow card-hover">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Enterprise AI</p>
+              <h3 class="mt-2 text-2xl font-semibold text-slate-950">Transaction Recommendation System</h3>
+            </div>
+            <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700">
+              Confidential
+            </span>
+          </div>
+
+          <p class="mt-4 leading-7 text-slate-600">
+            A banking AI system that converts raw transactional data into actionable insights for internal business and relationship teams.
+          </p>
+
+          <ul class="mt-5 space-y-3 text-sm leading-6 text-slate-600">
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>End-to-end pipeline from extraction and EDA to deployment and monitoring</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Built with Python, SQL, and Azure in a regulated environment</li>
+            <li class="flex gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600"></span>Designed for secure, governed, enterprise-scale usage</li>
+          </ul>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Python</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">SQL/T-SQL</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Azure</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">EDA</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Monitoring</span>
+            <span class="tech-tag rounded-full px-3 py-1 text-sm text-slate-700">Governance</span>
+          </div>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+              Discuss details
+            </a>
+            <a href="#experience" class="inline-flex items-center justify-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50">
+              See experience
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">Experience</p>
+        <h2 class="section-title mt-3 text-3xl font-semibold text-slate-950 sm:text-4xl">Delivery across regulated and product-driven environments</h2>
+      </div>
+
+      <div class="mt-12 space-y-6">
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <div class="flex flex-col justify-between gap-4 md:flex-row md:items-start">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-950">AI / ML Engineer</h3>
+              <p class="mt-1 text-slate-700">WEMA Bank Plc</p>
+            </div>
+            <div class="text-sm text-slate-500 md:text-right">
+              <div>2025 – Present</div>
+              <div>Lagos, Nigeria</div>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-600">
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>Developed and deployed AI systems, including a transaction recommendation engine and enterprise chatbot using Python, SQL, and Azure, generating actionable insights and supporting business teams at scale.</li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>Led end-to-end analytics pipelines covering data extraction, EDA, feature engineering, machine learning, deployment, and monitoring.</li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>Worked closely with IT, compliance, and product teams to deliver secure, well-governed AI solutions in a regulated environment.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <div class="flex flex-col justify-between gap-4 md:flex-row md:items-start">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-950">AI / ML Engineer (Contract)</h3>
+              <p class="mt-1 text-slate-700">JéGO Technologies Limited</p>
+            </div>
+            <div class="text-sm text-slate-500 md:text-right">
+              <div>2025</div>
+              <div>Remote</div>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-600">
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>Built machine learning models for electric vehicle route optimization and energy consumption prediction using real engineering data.</li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>Applied predictive modeling, optimization, and data preprocessing to solve practical energy and mobility problems.</li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>Collaborated in remote Agile teams, contributing to sprint delivery, code reviews, and system design across time zones.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <div class="flex flex-col justify-between gap-4 md:flex-row md:items-start">
+            <div>
+              <h3 class="text-xl font-semibold text-slate-950">Founder & Solutions Engineer</h3>
+              <p class="mt-1 text-slate-700">Ecotronics Enterprise</p>
+            </div>
+            <div class="text-sm text-slate-500 md:text-right">
+              <div>2022 – Present</div>
+              <div>Anambra, Nigeria</div>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-600">
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>Built and launched UpJobs.co, a live AI-powered job matching platform with automated pipelines, embedding-based recommendations, and real users.</li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>Built a RAG-powered Conversational Agent Builder enabling businesses to create AI chatbots using multi-source knowledge from files, text, and web content.</li>
+            <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>Designed and deployed scalable AI systems, delivering 20+ real-world AI, IoT, and automation solutions for SMEs and students using low-cost cloud and VPS infrastructure.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="border-y border-slate-200 bg-slate-50 py-20">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">Skills</p>
+        <h2 class="section-title mt-3 text-3xl font-semibold text-slate-950 sm:text-4xl">Tools and capabilities</h2>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <h3 class="text-lg font-semibold text-slate-950">Languages</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">Python, SQL (T-SQL), C++</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <h3 class="text-lg font-semibold text-slate-950">Machine Learning</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">Scikit-learn, TensorFlow, Keras, Model Evaluation, Optimization and Tuning</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <h3 class="text-lg font-semibold text-slate-950">LLMs and AI</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">Azure OpenAI, Prompt Engineering, NLP Pipelines, RAG, Embeddings, Vector Search, LangChain, AI Agents</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <h3 class="text-lg font-semibold text-slate-950">Backend</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">FastAPI, Flask, REST APIs</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <h3 class="text-lg font-semibold text-slate-950">Frontend</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">Streamlit, React, Tailwind CSS</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <h3 class="text-lg font-semibold text-slate-950">Data and DevOps</h3>
+          <p class="mt-4 text-sm leading-7 text-slate-600">PostgreSQL, Supabase, Azure Machine Learning, Azure AI Studio, Azure Functions, Docker, Git, GitHub, CI/CD, Cron Jobs, Logging and Monitoring</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="py-20">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">Community and leadership</p>
+        <h2 class="section-title mt-3 text-3xl font-semibold text-slate-950 sm:text-4xl">Mentorship and practical impact</h2>
+      </div>
+
+      <div class="mt-12 grid gap-8 lg:grid-cols-3">
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <h3 class="text-lg font-semibold text-slate-950">Mentorship</h3>
+          <p class="mt-4 leading-7 text-slate-600">
+            Mentored students on engineering and AI projects, delivering 20+ final-year solutions and guiding practical, real-world implementations.
+          </p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <h3 class="text-lg font-semibold text-slate-950">Chessncode</h3>
+          <p class="mt-4 leading-7 text-slate-600">
+            Mentor at Chessncode, supporting aspiring data professionals through structured guidance in data science and career development.
+          </p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 soft-shadow">
+          <h3 class="text-lg font-semibold text-slate-950">Community building</h3>
+          <p class="mt-4 leading-7 text-slate-600">
+            Built and deployed practical AI and engineering solutions for SMEs through Ecotronics Enterprise, focusing on scalable impact in African markets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="border-t border-slate-200 bg-slate-950 py-20 text-white">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-sky-300">Contact</p>
+        <h2 class="section-title mt-3 text-3xl font-semibold sm:text-4xl">Open to meaningful roles and collaborations</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-300">
+          I am available for full-time roles, remote work, consulting, and product collaborations in AI, data, and applied machine learning.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 lg:grid-cols-2">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h3 class="text-xl font-semibold">Reach me directly</h3>
+          <div class="mt-6 space-y-5 text-slate-200">
+            <p><span class="font-medium text-white">Email:</span> <a class="text-sky-300 hover:text-white" href="mailto:nwannachumaclifford@gmail.com">nwannachumaclifford@gmail.com</a></p>
+            <p><span class="font-medium text-white">LinkedIn:</span> <a class="text-sky-300 hover:text-white" href="https://linkedin.com/in/cliffordnwanna" target="_blank" rel="noopener noreferrer">linkedin.com/in/cliffordnwanna</a></p>
+            <p><span class="font-medium text-white">GitHub:</span> <a class="text-sky-300 hover:text-white" href="https://github.com/cliffordnwanna" target="_blank" rel="noopener noreferrer">github.com/cliffordnwanna</a></p>
+            <p><span class="font-medium text-white">Portfolio:</span> <a class="text-sky-300 hover:text-white" href="https://cliffordnwanna.github.io" target="_blank" rel="noopener noreferrer">cliffordnwanna.github.io</a></p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://cliffordnwanna.github.io/cv.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100">
+              Download CV
+            </a>
+            <a href="#projects" class="inline-flex items-center rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
+              Review projects
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h3 class="text-xl font-semibold">Quick profile summary</h3>
+          <p class="mt-5 leading-8 text-slate-300">
+            ML/AI Engineer with experience in finance, SaaS, and automation, building live products such as UpJobs.co and a RAG-based Conversational Agent Builder.
+            Focused on shipping practical AI systems, supporting African businesses, and building the kind of work that demonstrates ownership, deployment skill, and product thinking.
+          </p>
+
+          <div class="mt-8 rounded-2xl border border-white/10 bg-black/10 p-5">
+            <p class="text-sm text-slate-300">
+              This portfolio is intentionally built to highlight live products, enterprise experience, research interests, and community impact in one concise place.
             </p>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                <a href="#projects" class="bg-white text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">
-                    <i class="fas fa-rocket mr-2"></i>View Live Projects
-                </a>
-                <a href="https://github.com/cliffordnwanna" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition">
-                    <i class="fab fa-github mr-2"></i>GitHub Portfolio
-                </a>
-            </div>
-            <div class="flex justify-center items-center space-x-8 mt-12">
-                <a href="mailto:nwannachumaclifford@gmail.com" class="text-white hover:text-cyan-300 transition">
-                    <i class="fas fa-envelope text-2xl"></i>
-                </a>
-                <a href="https://linkedin.com/in/cliffordnwanna" target="_blank" class="text-white hover:text-cyan-300 transition">
-                    <i class="fab fa-linkedin text-2xl"></i>
-                </a>
-                <a href="https://github.com/cliffordnwanna" target="_blank" class="text-white hover:text-cyan-300 transition">
-                    <i class="fab fa-github text-2xl"></i>
-                </a>
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Senior Data & AI Engineer</h3>
-                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                            I'm a passionate Data & AI Engineer with 3+ years of experience building production-grade ML/AI systems. 
-                            I specialize in turning complex data into actionable business insights through intelligent automation and predictive modeling.
-                        </p>
-                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                            My expertise spans the entire ML pipeline - from data engineering and model development to deployment and monitoring. 
-                            I've successfully deployed systems serving 50K+ users and built multiple SaaS applications with enterprise adoption.
-                        </p>
-                        <div class="flex flex-col space-y-3">
-                            <div class="flex items-center">
-                                <i class="fas fa-map-marker-alt text-blue-500 w-6"></i>
-                                <span class="ml-3">Lagos, Nigeria (Remote Ready)</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-globe text-blue-500 w-6"></i>
-                                <span class="ml-3">Open to relocation with sponsorship</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-clock text-blue-500 w-6"></i>
-                                <span class="ml-3">Available across global time zones</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-bold text-gray-800 mb-6">Core Skills</h4>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="space-y-2">
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Python</div>
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">SQL/T-SQL</div>
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Azure AI</div>
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">LangChain</div>
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Streamlit</div>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Machine Learning</div>
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">NLP</div>
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Docker</div>
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">CI/CD</div>
-                                <div class="tech-badge text-white px-3 py-2 rounded-lg text-sm font-semibold">Power BI</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <script>
+    const mobileBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-                <p class="text-lg text-gray-600 mt-6">Production-ready AI/ML systems with real business impact</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-                <!-- CV360 Project -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                        <i class="fas fa-robot text-white text-6xl"></i>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-2xl font-bold text-gray-800">CV360 - AI CV Builder</h3>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">LIVE</span>
-                        </div>
-                        <p class="text-gray-600 mb-6">
-                            LLM-powered SaaS chatbot that generates recruiter-ready CVs. Built with Azure OpenAI and LangChain.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Streamlit</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Azure OpenAI</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">LangChain</span>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-sm text-gray-500">500+ users | 85% satisfaction</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://cv360.ecotronicsenterprise.com" target="_blank" class="flex-1 bg-blue-500 text-white text-center py-3 rounded-lg hover:bg-blue-600 transition">
-                                <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                            </a>
-                            <a href="https://github.com/cliffordnwanna" target="_blank" class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-50 transition">
-                                <i class="fab fa-github mr-2"></i>Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    mobileBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
 
-                <!-- Smart Attendance System -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
-                        <i class="fas fa-chart-bar text-white text-6xl"></i>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-2xl font-bold text-gray-800">Smart Attendance SaaS</h3>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">LIVE</span>
-                        </div>
-                        <p class="text-gray-600 mb-6">
-                            HR SaaS for SMEs that parses biometric logs and auto-generates reports with licensing and authentication.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Streamlit</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Supabase</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-sm text-gray-500">15+ SME clients | 99.5% uptime</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#contact" class="flex-1 bg-green-500 text-white text-center py-3 rounded-lg hover:bg-green-600 transition">
-                                <i class="fas fa-eye mr-2"></i>Request Demo
-                            </a>
-                            <a href="https://github.com/cliffordnwanna" target="_blank" class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-50 transition">
-                                <i class="fab fa-github mr-2"></i>Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BodyBalanceAI -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
-                        <i class="fas fa-heartbeat text-white text-6xl"></i>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-2xl font-bold text-gray-800">BodyBalanceAI Chatbot</h3>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">LIVE</span>
-                        </div>
-                        <p class="text-gray-600 mb-6">
-                            Healthcare chatbot for physiotherapy brand that automates client engagement and booking processes.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Python</span>
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Azure AI</span>
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Streamlit</span>
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Healthcare AI</span>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-sm text-gray-500">40% engagement increase | 25% booking efficiency</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#contact" class="flex-1 bg-purple-500 text-white text-center py-3 rounded-lg hover:bg-purple-600 transition">
-                                <i class="fas fa-eye mr-2"></i>Request Demo
-                            </a>
-                            <a href="https://github.com/cliffordnwanna" target="_blank" class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-50 transition">
-                                <i class="fab fa-github mr-2"></i>Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Enterprise Churn Model -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
-                        <i class="fas fa-brain text-white text-6xl"></i>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-2xl font-bold text-gray-800">Enterprise Churn Model</h3>
-                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">PRODUCTION</span>
-                        </div>
-                        <p class="text-gray-600 mb-6">
-                            ML model deployed at Wema Bank for customer churn prediction, powering enterprise-wide retention campaigns.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-orange-100 text-orange-800 px-3 py-2 rounded-full text-sm">Python</span>
-                            <span class="bg-orange-100 text-orange-800 px-3 py-2 rounded-full text-sm">SQL/T-SQL</span>
-                            <span class="bg-orange-100 text-orange-800 px-3 py-2 rounded-full text-sm">Azure AI</span>
-                            <span class="bg-orange-100 text-orange-800 px-3 py-2 rounded-full text-sm">MLOps</span>
-                        </div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-sm text-gray-500">50K+ customers served | 87% accuracy</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#contact" class="flex-1 bg-orange-500 text-white text-center py-3 rounded-lg hover:bg-orange-600 transition">
-                                <i class="fas fa-lock mr-2"></i>Confidential
-                            </a>
-                            <a href="#contact" class="flex-1 border border-gray-300 text-gray-700 text-center py-3 rounded-lg hover:bg-gray-50 transition">
-                                <i class="fas fa-info-circle mr-2"></i>Learn More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Experience</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-8">
-                    <!-- Wema Bank -->
-                    <div class="bg-gray-50 rounded-xl p-8 card-hover">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-800">Data Scientist</h3>
-                                <p class="text-lg text-blue-600 font-semibold">Wema Bank Plc</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-gray-600">Mar 2025 – Present</p>
-                                <p class="text-sm text-gray-500">Lagos, Nigeria (Hybrid)</p>
-                            </div>
-                        </div>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Built enterprise-wide churn prediction model serving 50K+ customers with 87% accuracy
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Designed AI agents on Azure AI Foundry for real-time customer analytics across 5+ business units
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Delivered comprehensive EDA on 500K+ customer records, improving marketing effectiveness by 15%
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Automated reporting pipelines, reducing manual work by 30% and improving accuracy by 25%
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- JéGO Technologies -->
-                    <div class="bg-gray-50 rounded-xl p-8 card-hover">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-800">AI/ML Engineer (Remote Contract)</h3>
-                                <p class="text-lg text-blue-600 font-semibold">JéGO Technologies</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-gray-600">Jan 2025 – Mar 2025</p>
-                                <p class="text-sm text-gray-500">Remote</p>
-                            </div>
-                        </div>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Developed ML workflows for EV optimization and energy consumption prediction
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Successfully contributed to distributed Agile teams with 95%+ sprint completion rate
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Implemented CI/CD best practices and participated in system design sessions
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Ecotronics -->
-                    <div class="bg-gray-50 rounded-xl p-8 card-hover">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-800">Founder & Solutions Engineer</h3>
-                                <p class="text-lg text-blue-600 font-semibold">Ecotronics Enterprise</p>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-gray-600">Jun 2022 – Present</p>
-                                <p class="text-sm text-gray-500">Remote</p>
-                            </div>
-                        </div>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Built and deployed 20+ AI/ML projects including CV360, Smart Attendance, and BodyBalanceAI
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Achieved 99.5% uptime across all live deployments with comprehensive monitoring
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                                Generated 500+ user registrations and 15+ enterprise clients across SaaS products
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <a href="https://cliffordnwanna.github.io/cv.pdf" target="_blank" class="inline-flex items-center bg-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition transform hover:scale-105">
-                        <i class="fas fa-download mr-3"></i>Download Full CV
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 gradient-bg text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
-                <div class="w-24 h-1 bg-white/30 mx-auto"></div>
-                <p class="text-xl mt-6 opacity-90">Ready to build something amazing? Let's connect!</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-8">Get In Touch</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-center">
-                            <div class="bg-white/20 rounded-full p-4 mr-6">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Email</p>
-                                <a href="mailto:nwannachumaclifford@gmail.com" class="text-cyan-300 hover:text-white transition">nwannachumaclifford@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-white/20 rounded-full p-4 mr-6">
-                                <i class="fab fa-linkedin text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold">LinkedIn</p>
-                                <a href="https://linkedin.com/in/cliffordnwanna" target="_blank" class="text-cyan-300 hover:text-white transition">linkedin.com/in/cliffordnwanna</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-white/20 rounded-full p-4 mr-6">
-                                <i class="fab fa-github text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold">GitHub</p>
-                                <a href="https://github.com/cliffordnwanna" target="_blank" class="text-cyan-300 hover:text-white transition">github.com/cliffordnwanna</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-white/20 rounded-full p-4 mr-6">
-                                <i class="fas fa-phone text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Phone</p>
-                                <p class="text-cyan-300">+2348107276194</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
-                    <form action="#" class="space-y-4">
-                        <input class="w-full rounded-lg p-4" placeholder="Clifford" />
-                        <input class="w-full rounded-lg p-4" placeholder="nwannachumaclifford@gmail.com" />
-                        <textarea class="w-full rounded-lg p-4" rows="5" placeholder="Message"></textarea>
-                        <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
-
-        document.querySelectorAll('.mobile-menu-item').forEach(el=> el.addEventListener('click', ()=> mobileMenu.classList.add('hidden')));
-    </script>
+    document.querySelectorAll(".mobile-menu-item").forEach((el) => {
+      el.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
 </body>
 </html>
-
-
