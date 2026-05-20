@@ -2,7 +2,7 @@
 
 ## Overview
 
-I build production AI systems that run in regulated environments — banking, healthcare, SaaS — not just demos that look good on slides.
+I design and deploy <strong>AI systems that solve real operational problems.</strong> From banking intelligence platforms and AI agents to embedded IoT products and production SaaS systems.
 
 **Key Impact:**
 - ₦295B at-risk corporate accounts identified (CRIS pipeline, Wema Bank)
