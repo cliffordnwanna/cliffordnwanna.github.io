@@ -1,122 +1,143 @@
-# Chukwuma Clifford Nwanna — AI/ML Engineer Portfolio
-
-Production-grade AI systems. Real users. Scalable solutions for emerging markets.
-
----
+# Clifford Nwanna — AI/ML Engineer
 
 ## Overview
 
-I am an AI/ML Engineer with 3+ years of experience building and deploying intelligent systems across finance, healthcare, and SaaS environments.
+I build production AI systems that run in regulated environments — banking, healthcare, SaaS — not just demos that look good on slides.
 
-My work focuses on:
-- End-to-end machine learning systems (data → model → deployment → monitoring)
-- LLM-powered applications (RAG, embeddings, AI agents)
-- Cost-efficient, scalable AI for SMEs and emerging markets
+**Key Impact:**
+- ₦295B at-risk corporate accounts identified (CRIS pipeline, Wema Bank)
+- 9k+ jobs matched daily (UpJobs.co)
+- 39/39 agent tests passing (Data Knight V2, Azure Synapse)
 
-Portfolio Website:  
+Portfolio Website:
 https://cliffordnwanna.github.io
 
 ---
 
-## Featured Live Projects
+## Featured Projects
 
-### UpJobs — AI Job Matching Platform
+### UpJobs.co — AI Job Matching Platform
 https://upjobs.co
 
-AI-powered job matching platform using embeddings and intelligent ranking to connect users with relevant opportunities.
+Solo-built job platform serving African talent. Ingests 9,000+ remote jobs daily from 9 sources, matches candidates via hybrid vector + rule scoring, and delivers results to WhatsApp. Paystack-monetised.
 
-Key Features:
-- Embedding-based job recommendation engine
-- Automated data pipelines and job ingestion
-- Real user adoption and live deployment
-
-Tech Stack:
-Python, FastAPI, PostgreSQL, Embeddings, VPS Deployment
+**Tech Stack:**
+Next.js 15, TypeScript, Supabase + pgvector, OpenAI GPT-4o-mini, LangChain, Python JobSpy, Paystack, WasenderAPI, PM2, Hetzner VPS
 
 ---
 
-### Conversational Agent Builder (RAG SaaS)
-https://conversational-agent-builder.vercel.app
+### Data Knight V2 — NL→SQL Enterprise Analytics
+**Production · Wema Bank · Confidential**
 
-A demo platform for building domain-specific AI chatbots using multi-source knowledge bases.
+Governed natural language to SQL platform on Azure Synapse. Intent classification routes queries to pre-approved templates — the Semantic Firewall Architecture. 39/39 agent tests passing.
 
-Key Features:
-- RAG-powered chatbot system
-- File upload, text input, and website scraping
-- Semantic search with vector embeddings
-- Real-time chat testing interface
-
-Tech Stack:
-Next.js, TypeScript, OpenAI, Vector Search, Tailwind CSS
-
-Repository:
-https://github.com/cliffordnwanna/CONVERSATIONAL_AGENT_BUILDER
+**Tech Stack:**
+FastAPI, Azure OpenAI, Azure Synapse, SQLite, Chart.js
 
 ---
 
-### Smart Attendance System (HR SaaS)
+### CRIS — Corporate Retention Intelligence System
+**Live · 320k+ accounts**
 
-AI-powered workforce analytics platform for SMEs that processes biometric logs and generates automated reports.
+1,069-line Python/SQL churn pipeline scanning every corporate account monthly. March 2026: 5,838 actionable accounts identified, ₦191.5B turnover reactivated.
 
-Key Features:
-- Attendance parsing and analytics
-- Automated reporting (PDF/CSV)
-- Authentication and licensing system
+**Tech Stack:**
+Python, T-SQL, Azure ML, Scikit-learn
 
-Tech Stack:
-Python, Streamlit, Supabase, PostgreSQL
+---
+
+### Streak AI — Banking Relationship Manager Agent
+**Production · LangChain Agent**
+
+LangChain AgentExecutor with Azure OpenAI and Row-Level Security. Four AI endpoints, markdown rendering, 50-customer production dataset across 6 Wema segments.
+
+**Tech Stack:**
+LangChain, Azure OpenAI, React, FastAPI
+
+---
+
+### Finance Intelligence — Personal Finance AI
+**Live · Hugging Face Spaces**
+
+GPT-4o-mini personal finance pipeline on HF Spaces. 100 pytest tests, GitHub Actions CI/CD. Open source.
+
+**Tech Stack:**
+Python, Streamlit, OpenAI, GitHub Actions
+
+---
+
+### Gateman — BLE Attendance SaaS
+**Hardware + Cloud · IoT SaaS**
+
+ESP32 + BLE badge hardware attendance system. M5Stack hardware, Google Drive integration. First paid deployment targeting Lagos offices. V2 in progress.
+
+**Tech Stack:**
+ESP32, BLE, Arduino, Google Drive API
+
 ---
 
 ## Technical Skills
 
-### AI / Machine Learning
-- Machine Learning, Predictive Modeling, Model Evaluation
-- NLP, LLM Integration, Prompt Engineering
-- Retrieval-Augmented Generation (RAG)
-- Embeddings and Vector Search
-- AI Agents and Conversational Systems
+### AI / LLM
+LangChain, Azure OpenAI, GPT-4o / mini, RAG Pipelines, pgvector, Embeddings, Prompt Engineering, AI Agents
 
-### Data Engineering
-- ETL/ELT Pipelines
-- Data Cleaning and Transformation
-- Feature Engineering
-- SQL Optimization
+### Backend
+Python, FastAPI, Flask, Node.js, SQL / T-SQL, PostgreSQL, Supabase, REST APIs
 
-### Backend & APIs
-- FastAPI, Flask
-- REST API Design
-- Microservices Architecture
+### Frontend
+Next.js 15, TypeScript, React, Tailwind CSS, Streamlit, Chart.js, HTML/CSS/JS
 
-### Frontend & Interfaces
-- Streamlit
-- React
-- Tailwind CSS
+### Cloud / MLOps
+Azure ML, Azure Synapse, Azure AI Studio, Docker, GitHub Actions, PM2, Hetzner VPS, CI/CD
 
-### Cloud & DevOps
-- Azure Machine Learning, Azure AI Studio
-- Docker, CI/CD
-- VPS Deployment, Cron Jobs
-- Monitoring and Logging
+### Data Science
+Scikit-learn, Pandas, Scipy, TensorFlow, Plotly, Power BI, Tableau, Feature Engineering
+
+### Hardware / IoT
+ESP32, Arduino, BLE, RFID, Raspberry Pi, Embedded C, IoT SaaS, Hardware-Cloud
+
+### Payments / SaaS
+Paystack, Resend, WasenderAPI, Supabase Auth, Row-Level Security, Webhooks, Subscriptions
 
 ---
 
-## Experience Highlights
+## Experience
 
-- Built and deployed AI systems in banking (Wema Bank) for customer analytics and decision support
-- Developed machine learning models for EV optimization (JéGO Technologies)
-- Founded Ecotronics Enterprise, delivering 20+ AI and automation solutions
-- Built and launched multiple SaaS platforms with real users
+**Data Scientist / AI Engineer** — Wema Bank Plc · Lagos, Nigeria · Mar 2025 — Present
+- Built CRIS churn pipeline — 320k+ accounts, ₦295B identified, ₦191.5B reactivated in first quarter
+- Designed Semantic Firewall Architecture for Data Knight — governed NL→SQL on Azure Synapse
+- Built Streak AI — LangChain + Azure OpenAI agent for relationship managers with RLS enforcement
+- Authored Microsoft Copilot productivity article for internal Data Digest publication
+
+**AI/ML Engineer (Contract)** — JéGO Technologies · Remote · Jan 2025 — Mar 2025
+- ML models for EV route optimisation and energy consumption prediction
+- Distributed Agile delivery across time zones
+
+**Service Engineer** — Coscharis Medical · Lagos, Nigeria · 2022 — 2024
+- Installation and maintenance of medical equipment across 25 Nigerian states
+- X-ray, ventilators, patient monitors, ultrasound systems — safety-critical environments
+
+**Founder & Solutions Engineer** — Ecotronics Enterprise · Anambra, Nigeria · 2021 — Present
+- UpJobs.co — live AI job platform, solo-built, paying users
+- Gateman — BLE attendance SaaS (registered business, first client)
+- INKLIENT — CNC pen plotter signing machine (Flask + G-code, near-production)
+
+---
+
+## Education
+
+**BEng Electronics & Computer Engineering** — Nnamdi Azikiwe University · 2021
+
+**Data Science** — GOMYCODE · 2023
 
 ---
 
 ## Contact
 
-Email: nwannachumaclifford@gmail.com  
-LinkedIn: https://linkedin.com/in/cliffordnwanna  
-GitHub: https://github.com/cliffordnwanna  
-
----
-
+Email: nwannachumaclifford@gmail.com
+LinkedIn: https://linkedin.com/in/cliffordnwanna
+GitHub: https://github.com/cliffordnwanna
+Portfolio: https://cliffordnwanna.github.io
 
 ---
 
